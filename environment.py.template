@@ -1,0 +1,198 @@
+# WEB browser that will be used by Selenium library
+BROWSER = 'Chrome'
+BROWSER_DOWNLOAD_DIRECTORY = '/path/to/user/browser/downloads/'
+
+# If the desired webdriver is placed inside 'morpheus/webdrivers/'
+# (which is recommended) then it is possible to reference it this way:
+# WEBDRIVER_PATH = 'webdrivers/chromedriver'
+WEBDRIVER_PATH = '/path/to/webdriver'
+
+# Timeout that will be used in 'Wait...' like RF Selenium keywords.
+SELENIUM_WAIT_TIMEOUT_SECONDS = '10'
+
+# Adjust these values according to your Testberry specific settings and environment.
+TESTBERRY_1 = {
+    'is_active': False,
+    'management': {
+        'ipv4_address': '172.30.0.1'
+    },
+    'ethernet': {
+        'interface': 'eth1',
+        'mac_address': 'dc:a6:32:cb:4a:2b'
+    },
+    'wireless': {
+        'interface': 'wlan0',
+        'mac_address': 'dc:a6:32:cb:4a:2c'
+    }
+}
+
+TESTBERRY_2 = {
+    'is_active': False,
+    'management': {
+        'ipv4_address': '172.30.0.2'
+    },
+    'ethernet': {
+        'interface': 'eth1',
+        'mac_address': '00:e0:4c:53:44:58'
+    },
+    'wireless': {
+        'interface': 'wlan0',
+        'mac_address': 'dc:a6:32:cb:3a:e1'
+    }
+}
+
+# Adjust these values according to your DUT specific settings and environment.
+# DUT generic settings are automatically updated during runtime with values
+# from DUT's own profile that is located at 'morpheus/devices/<DUT_NAME>'.
+
+# It is possible to setup as many DUT environments as needed.
+# There are two DUT environment examples below:
+# - DUT_BRIDGE_OPMODE_EXAMPLE
+# - DUT_ROUTER_OPMODE_EXAMPLE
+
+# It is crucial to choose which DUT environment is under test through the
+# variable DUT_ENV that is located at the end of this file.
+
+DUT_BRIDGE_OPMODE_EXAMPLE = {
+    'firmware': {
+        'version': '3.0.1',
+    },
+    'management': {
+        'ipv4_address': '172.16.0.14',
+        'http': {
+            'secure': False,
+            'port': '80'
+        },
+        'login': {
+            'username': 'admin',
+            'password': 'admin',
+            'first_access_password': 'M0rpheus!'
+        }
+    },
+    'network': {
+        'wan': {
+            'mac_address': None,
+            'ipv4': {
+                'address': None,
+                'netmask': None,
+                'gateway': None
+            },
+            'ipv6': {
+                'link_local': None,
+                'gateway': None
+            }
+        },
+        'lan': {
+            'mac_address': '58:10:8C:23:9B:17',
+            'ipv4': {
+                'address': '172.16.0.14',
+                'netmask': '255.255.0.0',
+                'gateway': '172.16.0.1',
+            },
+            'ipv6': {
+                'link_local': 'fe80::5a10:8cff:fe23:9b17/64',
+                'addresses': ['-'],
+                'gateway': '::'
+            }
+        }
+    },
+    'ethernet': {
+        'interface_1': {
+            'link_status': 'Conectado',
+            'speed': '1000 Mb/s',
+            'duplex': 'Full'
+        },
+        'interface_2': {
+            'link_status': 'Desconectado',
+            'speed': '-',
+            'duplex': '-'
+        }
+    },
+    'wireless': {
+        '2ghz': {
+            'default_ssid': {
+                'name': 'AP1250ACMax_9b17',
+                'mac_address': '58:10:8C:23:9B:18'
+            }
+        },
+        '5ghz': {
+            'default_ssid': {
+                'name': 'AP1250ACMax_9b17',
+                'mac_address': '58:10:8C:23:9B:19'
+            }
+        }
+    }
+}
+
+DUT_ROUTER_OPMODE_EXAMPLE = {
+    'firmware': {
+        'version': '3.0.0.88978',
+    },
+    'management': {
+        'ipv4_address': '172.16.0.14',
+        'http': {
+            'secure': False,
+            'port': '80'
+        },
+        'login': {
+            'username': 'admin',
+            'password': 'admin',
+            'first_access_password': 'M0rpheus!'
+        }
+    },
+    'network': {
+        'wan': {
+            'mac_address': '58:10:8C:23:9B:17',
+            'ipv4': {
+                'address': '172.16.0.14',
+                'netmask': '255.255.0.0',
+                'gateway': '172.16.0.1'
+            },
+            'ipv6': {
+                'link_local': 'fe80::5a10:8cff:fe23:9b17/64',
+                'gateway': '::'
+            }
+        },
+        'lan': {
+            'mac_address': '58:10:8C:23:9B:1A',
+            'ipv4': {
+                'address': '10.0.0.1',
+                'netmask': '255.255.0.0',
+                'gateway': None,
+            },
+            'ipv6': {
+                'link_local': 'fe80::5a10:8cff:fe23:9b1a/64',
+                'addresses': ['fd19:b227:8ece:9b17::1/64'],
+                'gateway': None
+            }
+        }
+    },
+    'ethernet': {
+        'interface_1': {
+            'link_status': 'Conectado',
+            'speed': '1000 Mb/s',
+            'duplex': 'Full'
+        },
+        'interface_2': {
+            'link_status': 'Desconectado',
+            'speed': '-',
+            'duplex': '-'
+        }
+    },
+    'wireless': {
+        '2ghz': {
+            'default_ssid': {
+                'name': 'AP1250ACMax_9b17',
+                'mac_address': '58:10:8C:23:9B:18'
+            }
+        },
+        '5ghz': {
+            'default_ssid': {
+                'name': 'AP1250ACMax_9b17',
+                'mac_address': '58:10:8C:23:9B:19'
+            }
+        }
+    }
+}
+
+DUT_ENV = DUT_BRIDGE_OPMODE_EXAMPLE

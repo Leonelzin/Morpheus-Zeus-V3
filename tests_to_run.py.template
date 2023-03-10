@@ -1,0 +1,41 @@
+"""
+Robot Framework documentation on how to select test cases to run:
+https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#selecting-test-cases
+
+If all list variables in this file are left empty (empty list)
+then ALL tests under 'morpheus/tests/' will be executed.
+"""
+
+
+INCLUDE_TAGS = []
+
+EXCLUDE_TAGS = ['no-run']
+
+SUITES = []
+
+TESTS_BY_NAME = []
+
+
+"""
++-----------------------------------------------------------------------------+
+|                               AVAILABLE TAGS                                |
+|-----------------------------------------------------------------------------|
+| HIGH LEVEL..: web, web-e2e, integration, factory-default                    |
+|-----------------------------------------------------------------------------|
+| STATUS......: status                                                        |
+|-----------------------------------------------------------------------------|
+| NETWORK.....: ethernet, lan                                                 |
+|-----------------------------------------------------------------------------|
+| WIRELESS....: wireless, wireless-2ghz, wireless-5ghz, wireless-roaming,     |
+|               ssid-isolation, ssid-scheduling                               |
+|-----------------------------------------------------------------------------|
+| SERVICES....: services, auto-configuration, discovery, discovery-intelbras, |
+|               ntp, snmp, watchdog                                           |
+|-----------------------------------------------------------------------------|
+| QOS ........: qos                                                           |
+|-----------------------------------------------------------------------------|
+| FIREWALL....: firewall, dmz, icmp-flood                                     |
+|-----------------------------------------------------------------------------|
+| SYSTEM......: system, system-management, ssh, password, first-access        |
++-----------------------------------------------------------------------------+
+"""

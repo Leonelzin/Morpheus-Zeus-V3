@@ -1,5 +1,4 @@
-# Morpheus-Zeus-V3
-
+# Morpheus
 This project is a test automation framework for [**ZEUS OS** project](https://git.intelbras.com.br/zeus/openwrt).
 
 It works along with [**Testberry** platform](https://git.intelbras.com.br/zeus/testberry).

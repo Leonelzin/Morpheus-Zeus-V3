@@ -1,0 +1,7 @@
+[2023-02-06 16:53:46,536] [ INFO     ] ---   INIT   ---
+[2023-02-06 16:53:46,536] [ INFO     ] Initializing Morpheus
+[2023-02-06 16:53:46,536] [ INFO     ] Test execution UNIX timestamp: 1675713226.5369325
+[2023-02-06 16:53:46,537] [ INFO     ] Checking environment variables
+[2023-02-06 16:53:46,537] [ ERROR    ] Environment variable check failed (missing variable).
+[2023-02-06 16:53:46,537] [ ERROR    ] Environment variable missing: 'ITB_DEV_FW_PASSWORD'
+[2023-02-06 16:53:46,537] [ CRITICAL ] Aborting test execution (exception will be raised).
